@@ -30,7 +30,7 @@ const LoginPopup = ({ setShowLogIn }) => {
         </div>
         {currStep === "Login" ? (
           <p>
-            Create a new accoung{" "}
+            Create a new account{" "}
             <span onClick={() => setCurrStep("Sign Up")}>Click Here</span>
           </p>
         ) : (
