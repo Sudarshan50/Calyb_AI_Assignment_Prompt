@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../components/Context/StoreContext";
+import { useNavigate } from "react-router-dom";
+import PlaceOrder from "../PlaceOrder/PlaceOrder";
 
 const Cart = () => {
-  const { cartItem, food_list, removeFromCart ,getTotal} =
-    React.useContext(StoreContext);
+  const { cartItem, food_list, removeFromCart ,getTotal} =React.useContext(StoreContext);
+  const navigate = useNavigate();
   return (
     <div className="cart">
       <div className="cart__items">
@@ -34,7 +36,6 @@ const Cart = () => {
                   <p onClick={() => removeFromCart(item._id)} className="cross">
                     x
                   </p>
-                  {/* <button onClick={()=>removeFromCart(item._id)}>Remove</button> */}
                 </div>
                 <hr />
               </>
@@ -48,20 +49,20 @@ const Cart = () => {
           <div>
             <div className="cart__total__details">
               <p>Subtotal</p>
-              <p>{getTotal()}</p>
+              <p>${getTotal()}</p>
             </div>
             <hr />
             <div className="cart__total__details">
               <p>Delivery Fee</p>
-              <p>{2}</p>
+              <p>${getTotal() === 0?0:2}</p>
             </div>
             <hr />
             <div className="cart__total__details">
               <p>Total</p>
-              <p>{getTotal()+2}</p>
+              <p>${getTotal()=== 0 ?0:getTotal()+2}</p>
             </div>
           </div>
-          <button>Proceed to CheckOut</button>
+          <button onClick={()=>navigate('/placeorder')}>Proceed to CheckOut</button>
         </div>
         <div className="cart__promocode">
           <div>
