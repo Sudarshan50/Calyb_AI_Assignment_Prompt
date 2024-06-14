@@ -35,12 +35,15 @@ The `ChatOverlay` component is an interactive chat overlay built with React that
 
 ## Usage
 
-1. **Run all the three files**:
-     ***For frontend and admin simply type***
+ **Run all the three files**:
+ ```bash
+cd <folder-name>
+```
+1. #### For frontend and admin simply type
    ```bash
     npm run dev
    ```
-     ***For backend simply type***
+2. #### For backend simply type
    ```bash
     nodemon server.js
    ```
