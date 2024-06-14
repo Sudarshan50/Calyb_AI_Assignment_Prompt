@@ -3,15 +3,18 @@ import cors from "cors";
 import foodRouter from "./routes/foodRoute.js";
 import bodyParser from "body-parser";
 import connectDB from "./config/db.js";
+import dotenv from "dotenv";
 
 
 const app = e();
 const port = 4000;
 
 //Middlewares
+dotenv.config();
 app.use(bodyParser.json());
 app.use(cors());
 app.use(e.json());
+
 
 
 //Database connection
