@@ -74,6 +74,16 @@ The `ChatOverlay` component is an interactive chat overlay built with React that
          
     ****Note:-If you are acessing the tour of add page it will redirect to a new page there you have to again give the prompt to guide in both case either you are trying to get tour from add page or from main page.****
 
+
+## File-Info
+### Admin
+The ChatOverlay file is located at `admin/src/components/ChatBox/ChatOverlay.js`.
+###Backend
+The main controller is located at `backend/controllers/foodControllers.js`. The two functions resposible for chat are `giveTourAdmin` and `giveTour`.
+###Frontend
+The ChatOverlay file is located at `frontend/src/components/ChatBox/ChatOverlay.js`.
+
+
 ## Customization
 
 ### Shepherd.js Tour Steps
