@@ -6,6 +6,7 @@ import Cart from "./pages/Cart/Cart";
 import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
+import ChatOverlay from "./components/ChatBox/ChatOverlay";
 
 const App = () => {
   const[showLoginPopup, setShowLoginPopup] = useState(false);
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/placeorder" element={<PlaceOrder />} />
         </Routes>
       </div>
+      <ChatOverlay apiUrl="http://localhost:4000" />
       <Footer />
     </>
   );

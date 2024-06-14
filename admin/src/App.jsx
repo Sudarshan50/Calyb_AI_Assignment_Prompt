@@ -8,6 +8,7 @@ import List from "./Pages/List/List";
 import Order from "./Pages/Order/Order";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ChatOverlay from "./components/ChatBox/ChatOverlay";
 
 const App = () => {
   const url = "http://localhost:4000";
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/list" element={<List url={url} />} />
           <Route path="/order" element={<Order url={url} />} />
         </Routes>
+        <ChatOverlay apiUrl= {url} />
       </div>
     </div>
   );

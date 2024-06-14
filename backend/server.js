@@ -1,6 +1,7 @@
 import e from "express";
 import cors from "cors";
 import foodRouter from "./routes/foodRoute.js";
+import bodyParser from "body-parser";
 import connectDB from "./config/db.js";
 
 
@@ -8,6 +9,7 @@ const app = e();
 const port = 4000;
 
 //Middlewares
+app.use(bodyParser.json());
 app.use(cors());
 app.use(e.json());
 
@@ -20,6 +22,8 @@ app.use("/api/food", foodRouter);
 app.use("/images",e.static('uploads'));
 app.use('/list',foodRouter);
 app.use('/remove',foodRouter);
+app.use('/tour',foodRouter);
+app.use('/chat',foodRouter);
 
 app.get('/', (req, res) => {
     res.send('Hello World');

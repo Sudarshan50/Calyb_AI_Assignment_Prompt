@@ -1,11 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Cart.css";
 import { StoreContext } from "../../components/Context/StoreContext";
 import { useNavigate } from "react-router-dom";
+import Shepherd from "shepherd.js";
+import "shepherd.js/dist/css/shepherd.css";
 import PlaceOrder from "../PlaceOrder/PlaceOrder";
 
 const Cart = () => {
-  const { cartItem, food_list, removeFromCart ,getTotal} =React.useContext(StoreContext);
+  const { cartItem, food_list, removeFromCart, getTotal } =
+    React.useContext(StoreContext);
   const navigate = useNavigate();
   return (
     <div className="cart">
@@ -54,15 +57,17 @@ const Cart = () => {
             <hr />
             <div className="cart__total__details">
               <p>Delivery Fee</p>
-              <p>${getTotal() === 0?0:2}</p>
+              <p>${getTotal() === 0 ? 0 : 2}</p>
             </div>
             <hr />
             <div className="cart__total__details">
               <p>Total</p>
-              <p>${getTotal()=== 0 ?0:getTotal()+2}</p>
+              <p>${getTotal() === 0 ? 0 : getTotal() + 2}</p>
             </div>
           </div>
-          <button onClick={()=>navigate('/placeorder')}>Proceed to CheckOut</button>
+          <button onClick={() => navigate("/placeorder")}>
+            Proceed to CheckOut
+          </button>
         </div>
         <div className="cart__promocode">
           <div>

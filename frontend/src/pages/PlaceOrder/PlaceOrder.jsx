@@ -31,17 +31,17 @@ const PlaceOrder = () => {
           <div>
             <div className="cart__total__details">
               <p>Subtotal</p>
-              <p>{getTotal()}</p>
+              <p>${getTotal()}</p>
             </div>
             <hr />
             <div className="cart__total__details">
               <p>Delivery Fee</p>
-              <p>{getTotal() === 0 ? 0 : 2}</p>
+              <p>${getTotal() === 0 ? 0 : 2}</p>
             </div>
             <hr />
             <div className="cart__total__details">
               <p>Total</p>
-              <p>{getTotal() === 0 ? 0 : getTotal() + 2}</p>
+              <p>${getTotal() === 0 ? 0 : getTotal() + 2}</p>
             </div>
           </div>
           <button onClick={() => navigate("/placeorder")}>
