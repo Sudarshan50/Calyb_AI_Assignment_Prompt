@@ -25,7 +25,7 @@ The `ChatOverlay` component is an interactive chat overlay built with React that
     cd <your-repo-name>
     ```
 
-2. **Install dependencies**:
+2. **Install dependencies in all three folder namely `admin`, `frotend`, `backend` **:
 
     ```bash
     npm install
@@ -35,12 +35,12 @@ The `ChatOverlay` component is an interactive chat overlay built with React that
 
 ## Usage
 
-1. **Import the `ChatOverlay` component**:
-
-    ```jsx
-    import ChatOverlay from './components/ChatOverlay';
-    ```
-
+1. **Run all the three files**:
+     ***For frontend and admin simply type***
+        ``` npm run dev```
+     ***For backend simply type***
+        ```nodemon server.js```
+   
 2. **Include the `ChatOverlay` component in your application**:
 
     ```jsx
