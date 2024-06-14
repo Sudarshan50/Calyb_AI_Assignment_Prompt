@@ -78,9 +78,9 @@ The `ChatOverlay` component is an interactive chat overlay built with React that
 ## File-Info
 ### Admin
 The ChatOverlay file is located at `admin/src/components/ChatBox/ChatOverlay.js`.
-###Backend
+### Backend
 The main controller is located at `backend/controllers/foodControllers.js`. The two functions resposible for chat are `giveTourAdmin` and `giveTour`.
-###Frontend
+### Frontend
 The ChatOverlay file is located at `frontend/src/components/ChatBox/ChatOverlay.js`.
 
 
